@@ -1,0 +1,17 @@
+.EventForecast>.form_label{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width:100%;
+	text-align: center;
+}
+
+.EventForecast_checkbox_group {
+	margin-top: 2em;
+	display: flex;
+	justify-content: space-around;
+}
+
+.eventForecastGroup_label input{
+	vertical-align: middle;
+}

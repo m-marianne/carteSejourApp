@@ -1,0 +1,43 @@
+.feelings_jauge {
+	border:1px solid aqua;
+	height: 100%;
+	width: 100%;
+}
+
+.jauge {
+    height: auto;
+}
+
+.jauge_Circle{
+	margin: 0;
+	z-index: 1;
+
+}
+
+.jauge_cercle{
+	fill: transparent;
+	stroke: var(--txt-color); 
+	stroke-width: 1; 
+	stroke-dasharray: 3;
+}
+
+.jauge_cercle:hover {
+	fill: var(--txt-color);
+}
+
+.jauge_txt{
+	fill: var(--txt-color); 
+	text-anchor: middle; 
+	font-size: 0.8em;
+}
+
+.EventImportance .jauge{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.feeling_option .jauge {
+	width: 30%;
+}

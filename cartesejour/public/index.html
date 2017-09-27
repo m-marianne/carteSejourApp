@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ -->    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+        <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i" rel="stylesheet"> 
+    <script src="https://d3js.org/d3.v4.js"></script> 
+    
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="./styles/styleForm.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>carte de séjour</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#userMenu" class="userMenu-icon"></a><!--picto hamburger-->
+      <div id="userMenu" class="userMenu">
+        <a class="userMenu-close" href="#"></a>
+        <a class="userMenu-aide" href="#">aide</a>
+        <a class="userMenu-param" href="#">paramètres</a>
+        <a class="userMenu-profil" href="#">profil</a>
+        <a class="userMenu-diconnect" href="#">disconnect</a>
+        <a class="userMenu-login" href="/login"></a>
+        <a class="userMenu-signUp" href="/register"></a>
+      </div>
+      <a href="#" class="logo"></a>
+    </div>
+  <div class="site-content">
+    <script type="text/jsx" src = "src/index.js"></script>
+    <div id="root"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+	"COLOR": {
+        "colorMin1": [35,7,37],
+        "colorMax1": [255,237,0],
+        "colorMin2": [46,45,19],
+        "colorMax2": [250,193,138],
+        "colorMin3": [36,72,26],
+        "colorMax3": [229,0,81],
+        "colorMin4": [38,58,80],
+        "colorMax4": [142,196,190],
+        "colorMin5": [0,49,43],
+        "colorMax5": [189,215,144]
+    },
+    "FEELING": {
+        "boundMin1": "tristesse",
+        "boundMax1": "joie",
+        "boundMin2": "dégoût",
+        "boundMax2": "aspiration",
+        "boundMin3": "peur",
+        "boundMax3": "courage",
+        "boundMin4": "remord",
+        "boundMax4": "soulagement",
+        "boundMin5": "égarement",
+        "boundMax5": "apaisement"
+    },
+    "ID": {
+        "id1": "feeling1",
+        "id2": "feeling2",
+        "id3": "feeling3",
+        "id4": "feeling4",
+        "id5": "feeling5"
+    },
+    "EVENT_ITEMS": {
+        "activités": [
+            {"cle": "balade", "img": "../../img/pictoEvent/balade.svg"},
+            {"cle": "surf", "img": "../../img/pictoEvent/surf.svg"},
+            {"cle": "visite", "img": "../../img/pictoEvent/visite.svg"}
+        ],
+        "environnement":[
+            {"cle": "chaleur", "img": "../../img/pictoEvent/chaleur.svg"},
+            {"cle": "irruption volcanique", "img": "../../img/pictoEvent/irruptionVol.svg"},
+            {"cle": "orage", "img": "../../img/pictoEvent/orage.svg"}
+        ],
+        "intéractions humaines": [
+            {"cle": "rencontre", "img": "../../img/pictoEvent/rencontre.svg"},
+            {"cle": "dispute", "img": "../../img/pictoEvent/dispute.svg"},
+            {"cle": "discussion avec un(e) inconnu(e)", "img": "../../img/pictoEvent/discussionInconnu.svg"}
+        ],
+        "incidents":[
+            {"cle": "accident véhicule", "img": "../../img/pictoEvent/accidentV.svg"},
+            {"cle": "blessure", "img": "../../img/pictoEvent/blessure.svg"},
+            {"cle": "maladie", "img": "../../img/pictoEvent/maladie.svg"}
+        ]       
+    }
+}

@@ -1,0 +1,113 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.createMap_Infos {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+	width:100%;
+	height: 4em;
+	margin: 1em, 0;
+	padding-top: 0.7em;
+	font-size: 1.2em;
+	background-color: none;
+}
+
+.createMap_container_TripName {
+	margin-right: 2em;
+	font-weight: 400;
+	font-size: 0.6em;
+}
+
+.createMap_container{
+	/*border:1px solid purple;*/
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.createMap_container_tools, .createMapTools_Form{	
+	display: block;
+	width: 100%;
+	margin:0;
+}
+
+.createMap_container_preview{
+	/*border:1px solid aqua;*/
+	margin:0;
+	width:100%;
+}
+
+.createMap_container_buttons_submit{
+	height: 2.5rem;
+	width: 20vw;
+	margin: 5% auto 5% auto;
+	color: var(--main-bg-color); /*gris*/
+	font-size: 1.2em;
+	background-color: var(--txt-color);
+	border: none;
+	text-decoration-style: none;
+	transition-duration: 0.2s;
+	display: block;
+}
+
+.createMap_container_buttons_submit:hover{
+	background-color: var(--txt-color);
+	transform: scale(1.1, 1.1);
+}
+
+/* Medium screen, retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 670px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (                min-resolution: 192dpi) and (min-width: 670px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 670px) {
+
+	.createMap_container_preview{
+		margin-left: auto;
+		margin-right: auto;
+		width:45%;
+	}
+}
+
+/* Large screen, non-retina */
+@media only screen and (min-width: 1000px) {
+
+	.createMap_container{
+		display: inline-flex;
+		flex-direction: row;
+		overflow: all;
+	}
+
+	.createMap_container_tools, .createMapTools_Form{	
+		display: block;
+		width: 63%;
+		height: 100%;
+		margin:0;
+	}
+
+	.createMap_container_preview{
+		margin-left: auto;
+		margin-right: auto;
+		width:35%;
+		position: fixed;
+    	left: 63%;
+	}
+}
+
+/* Large screen */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+}	

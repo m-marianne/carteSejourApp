@@ -1,0 +1,199 @@
+.EventDate{
+	align-items: baseline;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.EventDate_Time{
+	width: 100%;
+	align-items: baseline;
+	display: inline-flex;
+	flex-direction: column-reverse;
+	margin-top: 2em;
+	padding-top: 1.5em;
+	border-top: 1px solid var(--txt-color);
+}
+
+.form_date_inputGroup {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	/*border: 1px solid red;*/
+}
+
+.form_date_inputGroup_label {
+	font-size: 0.9em;
+	display: flex;
+	max-width: 400px;
+	flex-direction: column;
+	text-align: center;
+}
+
+.form_date_inputGroup_champ{
+	margin-left: 10px; 
+}
+
+input[type='time']{
+	font-family: 'roboto', sans-serif;
+	font-weight: 300;
+	font-size: 0.9em; 
+	color: var(--tool-bg-color);
+}
+
+.datepicker	a, .chosenDate, .next, .prev, .today {
+	color: var(--txt-color);
+	text-decoration: none;
+	transition: all .25s;
+}
+.momentPie_txt {
+	fill: var(--txt-color); 
+	text-anchor: middle; 
+	font-size: 1.5em;
+}
+
+.datepicker-holder {
+	border-top: 2px solid var(--txt-color);
+}
+
+.datepicker-holder, input[type='time'] {
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	text-align: center;
+}
+ input[type='time']{
+ 	margin-bottom: 3.5em;
+ }
+
+.heading{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 1.5em;
+	margin-top: 0.5em;
+}
+
+.prev {
+	order:-2;
+}
+
+.MonthYearCurrent{
+	order:-1;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+.MonthYearCurrent span {
+	margin-left: 0.3em;
+	margin-right: 0.3em;
+}
+
+.datepicker {
+	border: none;
+	overflow: hidden;
+	width: 100%;
+	display: inline-flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+}
+.cell {
+	border-bottom: 1px solid var(--txt-color);
+	height: 30px;
+	width: 14.2%;
+	line-height: 28px;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+.datepicker	.cell a {
+	display: block;
+	text-decoration: none;
+}
+
+.datepicker	.cell a.current {
+	background: var(--txt-color);
+	color: var(--tool-bg-color);
+	font-weight: 500;
+}
+
+.datepicker	.cell a:hover {
+	background: var(--txt-color);
+	color: var(--tool-bg-color);
+}
+
+.chosenDate{
+	background-color: var(--txt-color);
+	color: var(--tool-bg-color);
+	font-weight: 600;
+	font-size: 1.4em;
+	width: 100%;
+	height: auto;
+	margin-top: 0.9em;
+	margin-bottom: 0.9em;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+}
+
+.datePicker_footer {
+	font-size: 0.9em;
+	margin-bottom: 0.8em; 
+}
+
+.MomentPie{
+	width: 100%;
+}
+
+.TimeEvent_moment_part {
+	stroke : white;
+	fill: transparent;
+}
+
+.TimeEvent_moment_part:hover {
+	stroke : white;
+	fill: white;
+}
+
+/* Medium screen, retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 670px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (                min-resolution: 192dpi) and (min-width: 670px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 670px) {
+
+	.EventDate{
+		align-items: center;
+		display: inline-flex;
+		flex-direction: row;
+	}
+
+	.EventDate_Time{
+		align-items: center;
+		flex-direction: row-reverse;
+		margin-top: 0;
+		padding-top: 1.5em;
+		border-top: none;
+	}
+}
+
+/* Large screen, non-retina */
+@media only screen and (min-width: 1000px) {
+	
+	.EventDate{
+		align-items: center;
+		display: inline-flex;
+		flex-direction: row;
+	}
+
+	.EventDate_Time{
+		width: 100%;
+		align-items: center;
+		display: inline-flex;
+		flex-direction: row-reverse;
+		margin-top: 2em;
+		padding-top: 1.5em;
+		border-top: none;
+	}
+}

@@ -1,0 +1,90 @@
+/*.viewMap> .viewMap_Infos {
+	height: 5%;
+	padding: 0.1em;
+}
+
+.viewMap> .viewMap_Tools {
+	height: 7%;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.viewMap> .viewMap_Tools> .viewMap_Tools_buttons_group{
+	padding-left: 2em;
+}
+
+.viewMap> .viewMap_Tools> .PreviewToolbar {
+	height: 30px;
+	margin: 0;
+}
+
+.viewMap> .viewMap_Tools> .PreviewToolbar> .previewToolbar_zoom {
+	height: 30px;
+	margin: 0;
+}
+
+.viewMap> .viewMap_Tools> .PreviewToolbar> .previewToolbar_zoom> .previewToolbar_zoom_range {
+	margin: 0;
+}
+
+.viewMap> .viewMap_Tools> .PreviewToolbar> .previewToolbar_zoom> .previewToolbar_zoom_range_valuesContainer>p{
+	margin-top:3px;
+	height: 2px;
+}
+
+.viewMap> .viewMap_Tools>button{
+	margin-top: 0;
+	padding: 0;
+}
+
+.viewMap_container{
+	display: inline;
+	margin:0;
+	padding: 0;
+}
+
+.viewMap_container_Map{
+	display: inline-flex;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.Carte{
+	width: 60%;
+	height: auto;
+	margin:0;
+	display: block;
+}
+
+.fondMap_bg{
+	fill: #FFFFFF;
+}
+
+.fondMap_line {
+	fill: none;
+	stroke: #825A46;
+	opacity: 0.4;
+	stroke-width: 1px;
+	stroke-miterlimit: 10;
+}
+
+.fondMap_border{
+	fill: #825A46;
+}
+
+.fondMap_signes{
+	fill: none;
+	stroke: #825A46;
+	stroke-width: 3;
+	stroke-miterlimit: 10;
+}
+
+.Legend{
+	background-color: var(--txt-color);
+	width:43.5%;
+	height: auto;
+	margin-right: 1.5%;
+}
+*/

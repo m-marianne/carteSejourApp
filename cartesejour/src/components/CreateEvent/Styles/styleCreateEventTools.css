@@ -1,0 +1,77 @@
+/* Small screen, non-retina */
+
+/* _______________________________________________________________
+
+					Form _ 
+					Commons components Styles 
+					and details big components' styles
+
+_________________________________________________________________*/
+
+
+.createMap_container_tools_components{
+	width: 100%;
+}
+
+.EventDate, .EventType, .EventSurprising, .EventForecast, .EventFeeling, .EventImportance, .Feelings, .EventOther{
+	/*border: 1px solid aqua;*/
+	width:100%;
+	background-color: var(--tool-bg-color);
+	margin-bottom: 1%;
+	padding: 1em;
+	display: block;
+}
+
+.EventOther{
+	text-align: center;
+}
+
+.form_label {
+	font-size:0.9em;
+}
+
+.EventImportance,  .EventSurprising{
+	/*border: 1px solid yellow;*/
+	height: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.EventImportance .form_label .jauge{
+	width: 70%;
+	margin-top: 1.5em;
+}
+
+/* Medium screen, retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 670px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (                min-resolution: 192dpi) and (min-width: 670px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 670px) {
+
+	.EventImportance .form_label .jauge{
+		width: 45%;
+		margin-top: 1.5em;
+	}
+
+}
+
+/*.Event_etapeNext{
+	background: url(/img/PictoNextStep.png) 0 0 no-repeat;
+	width: 36px;
+	height: 36px;
+	bottom:36px;
+}
+
+.Event_etapeNext:hover{
+	background: url(/img/PictoNextStep_hover.png) 0 0 no-repeat;
+}*/
+
+/* _______________________________________________________________
+
+						Form _ General Styles
+_________________________________________________________________*/
+

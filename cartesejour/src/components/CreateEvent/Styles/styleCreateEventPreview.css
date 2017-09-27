@@ -1,0 +1,70 @@
+/*.PreviewToolbar, .viewMap_Tools {
+	width:100%;
+	height: 9%;
+	background-color: var(--tool-bg-color);
+	margin-bottom: 1%;
+	padding-right: 2em;
+	padding-left: 2em;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.previewToolbar_zoom{
+	width:90%;
+}
+
+.previewToolbar_zoom_range_valuesContainer {
+	display: inline-flex;
+	justify-content: space-between;
+	width:90%;
+	align-items: center;
+}
+
+.previewToolbar_zoom_range_valuesContainer>p {
+	margin-top: 0.4em;
+}
+
+.previewToolbar_navig, .viewMap_Tools_buttons {
+	border: 1.25px solid var(--txt-color);
+	
+	width: 30px;
+	height: 30px;
+}
+
+.viewMap_Tools .previewToolbar{
+	padding-right:0;
+	margin-right: 0;
+}
+
+.viewMap_Tools_buttons_group{
+	display: inline-flex;
+	justify-content: space-between;
+	width:20%;
+	margin-right: 40%;
+}
+
+.PreviewFond_Line {
+	fill: none;
+	stroke:#825A46;
+	stroke-width:0.25;
+	stroke-miterlimit:10;
+}
+
+.PreviewFond_border1{
+	fill: none;
+	stroke: #825A46;
+	stroke-miterlimit: 10;
+}
+
+.PreviewFond_border2{
+	fill:#825A46;
+}
+
+.PreviewFond_rectFond{
+	fill: #FFFFFF;
+	stroke:#825A46;
+	stroke-width:0.25;
+	stroke-miterlimit:10;
+}*/

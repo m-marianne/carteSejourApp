@@ -1,0 +1,215 @@
+/* Small screen, non-retina */
+
+body, html {
+	font-family: 'roboto', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+:root{
+	--main-bg-color: rgba(22, 34, 40, 0.85); /*(255, 255, 255, 1)*/
+	--tool-bg-color: rgba(22, 34, 40,1); /*#f2edde*/
+	--txt-color: rgba(255, 255, 255, 1);
+	--main-bg-color-2: rgba(232, 225, 213, 1);
+}
+
+.site-content, #root{
+	width: 100vw;
+	height:100vh;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	height: 76px;
+	width: 100vw;
+	background-color: var(--main-bg-color);
+	/*box-shadow: 0rem 0.5rem 1rem var(--main-bg-color);*/
+	z-index: 10;
+	position: fixed;
+}
+
+.logo {
+	background: url(/img/logo.png) 0 0 no-repeat; 
+	width: 36px;
+	height: 36px;
+	display:inline-block;
+	margin: 1.5% auto 1.5% auto;
+	padding: 0;
+}
+
+.userMenu-icon, .userMenu-icon:hover {
+	width: 36px;
+	height: 36px;
+	display:inline-block;
+	margin: 1.5% 0% 1.5% 2.5%;
+	cursor: pointer;
+}
+
+.userMenu-icon {
+	background: url(/img/PictoUserMenu.png) 0 0 no-repeat;
+}
+
+.userMenu-icon:hover {
+	background: url(/img/PictoUserMenu-clicked.png) 0 0 no-repeat; 
+}
+
+.userMenu {
+	padding-left: 2%;
+	padding-right: 5%;
+	padding-top: 0%;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 50%;
+}
+
+.userMenu {
+	position: absolute;
+	top: 0;
+	left: -120vw;
+	transition-property: left;
+	transition-duration: 0.7s;
+	transition-timing-function: ease;
+}
+
+.userMenu:target {
+	left: 0;
+}
+
+.userMenu a {
+	display: block;
+	font-size: 1.4rem;
+	color : var(--txt-color);
+	text-decoration: none;
+	margin-bottom: 15%;
+	transition-duration: 0.2s;
+}
+
+.userMenu-close, .userMenu-login, .userMenu-signUp {
+	width:36px;
+	height:36px;
+	margin: 0% 2% 10% 2%;
+	background-position: left center;
+}
+
+.userMenu-close {
+	margin-top: 20px;
+	background: url(/img/PictoClose.png) 0 0 no-repeat; 
+}
+
+.userMenu-login {
+	background: url(/img/PictoLogin.png) 0 0 no-repeat; 
+}
+
+.userMenu-signUp {
+	background: url(/img/PictoRegister.png) 0 0 no-repeat; 
+}
+
+.userMenu a:hover{
+	opacity: 0.65;
+}
+
+.identification, .register, .NewMap{	
+	display: flex;
+	justify-content: center;
+	height:100vh;
+	padding: 152px 12.5vw 5vh 12.5vw; 
+	color: var(--txt-color);
+}
+
+.createMap, .viewMap {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding-right: 2%;
+	padding-left: 2%;
+	padding-top: 76px;
+	color: var(--txt-color);
+	background-color: var(--main-bg-color);
+}
+
+.identification, .register, .NewMap {
+	background-color: rgba(46, 232, 188, 0.85); /*bleu*/
+}
+
+/* Small screen, retina, stuff to override above media query */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
+
+  
+
+}
+
+/* Medium screen, non-retina */
+@media only screen and (min-width: 700px) {
+	
+	body{
+	}
+  
+	.userMenu {
+		width: 33.33vw;
+	}
+
+	.userMenu a {
+		font-size: 1.8rem;
+	}
+
+	.identification, .register, .NewMap{
+		display: flex; 
+		flex-direction: row;
+		justify-content: center;
+		width:75vw;
+		height: auto;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 152px;
+		background-color: rgba(46, 232, 188, 0.85); /*bleu*/
+		background-blend-mode: luminosity;
+		font-size: 1.1em;
+	}
+
+	.identification, .register {
+		background-color: rgba(46, 232, 188, 0.85); /*bleu*/
+	}
+}
+/* Medium screen, retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
+
+}
+ /* Large screen, non-retina */
+@media only screen and (min-width: 1300px) {
+
+	.userMenu {
+		width: 16.66vw;
+	}
+
+	.userMenu a {
+		font-size: 1.8rem;
+	}
+  	
+  	.identification, .register, .NewMap, .form_otherElements {
+		width: 55.55vw;
+	}
+
+}
+/* Large screen, retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+}

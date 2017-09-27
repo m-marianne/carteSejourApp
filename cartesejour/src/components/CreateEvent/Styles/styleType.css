@@ -1,0 +1,93 @@
+.EventType_Main{
+	/*border:1px solid white;*/
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	list-style-type: none;
+	display: inline-flex;
+	flex-direction: column;
+	font-size: 0.9em;
+}
+
+.EventType_List_Family{
+	/*border-bottom: 1px solid white;*/
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+}
+
+.EventType_List_Family:hover{
+	border-top: none;
+	background-color: var(--txt-color);
+	color: var(--main-bg-color);
+	font-weight: 600;
+
+}
+
+.EventType_button{
+	background-color: transparent;
+	border: none;
+	color : var(--txt-color);
+	font-size: 1.5em;
+}
+
+.EventType_button:hover, .EventType_button:active {
+	transform: rotate(90deg);
+	background-color: var(--txt-color);
+	color: var(--main-bg-color);
+}
+
+.EventType_Options {
+	/*border: 1px solid blue;*/
+	border-bottom: 1px solid var(--txt-color);
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 3%;
+	padding-bottom: 3%;
+}
+
+.EventType_List {
+/*	border:1px solid green;*/	
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.EventType_Option {
+	height: 4em;
+	padding: 0.7em;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: inline-flex;
+	align-items: center;
+	min-width: 28%;
+}
+.EventType_Option:hover {
+	/*border:1px solid green;*/
+	background-color: var(--txt-color);
+	color: var(--main-bg-color);
+	font-weight: 500;
+}
+
+.EventType_Option > input {
+	display: none;
+}
+
+.type_picto {
+	/*border: 1px solid aqua;*/
+	height: 3em;
+	width: 3em;
+	margin-right: 0.7em;
+	object-fit: contain;
+}

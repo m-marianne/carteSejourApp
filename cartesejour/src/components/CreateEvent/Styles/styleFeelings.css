@@ -1,0 +1,185 @@
+.feeling_option{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	border-bottom: 1px solid var(--txt-color);
+}
+
+.feeling_option> .range_group{ 
+	height: auto;
+}
+
+.feeling_option .jauge{ 
+	width: 70%;
+	height: auto;
+}
+
+.feelingsIntensity_group{
+	width: 38%;
+	height: auto;
+}
+
+.feelings_range[type='range']::-webkit-slider-runnable-track {
+	height: 24px;
+	width: 100%
+}
+
+#feeling1[type='range']::-webkit-slider-runnable-track {
+	background: -webkit-linear-gradient(right, rgb(255,237,0) , rgb(35,7,37)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgb(255,237,0), rgb(35,7,37)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(to left, rgb(255,237,0) , rgb(35,7,37)); /* Standard syntax */
+}
+
+#feeling2[type='range']::-webkit-slider-runnable-track {
+	background: -webkit-linear-gradient(right, rgb(250,193,138), rgb(46,45,19)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgb(250,193,138), rgb(46,45,19)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(to left, rgb(250,193,138), rgb(46,45,19)); /* Standard syntax */
+}
+
+#feeling3[type='range']::-webkit-slider-runnable-track {
+	background: -webkit-linear-gradient(right, rgb(229,0,81), rgb(36,72,26)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgb(229,0,81), rgb(36,72,26)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(to left, rgb(229,0,81), rgb(36,72,26)); /* Standard syntax */
+}
+
+#feeling4[type='range']::-webkit-slider-runnable-track {
+	background: -webkit-linear-gradient(right, rgb(142,196,190), rgb(38,58,80)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgb(142,196,190), rgb(38,58,80)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(to left, rgb(142,196,190), rgb(38,58,80)); /* Standard syntax */
+}
+
+#feeling5[type='range']::-webkit-slider-runnable-track{
+	background: -webkit-linear-gradient(right, rgb(189,215,144), rgb(0,49,43)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left, rgb(189,215,144), rgb(0,49,43)); /* For Opera 11.1 to 12.0 */
+	background: linear-gradient(to left, rgb(189,215,144), rgb(0,49,43)); /* Standard syntax */
+}
+
+.feelings_range[type=range]::-webkit-slider-thumb {
+	height: 24px;
+	width: 3px;
+	border-radius:0%;
+	background-color: var(--txt-color);
+	border: 0px solid var(--txt-color);
+	margin-top: 0px;
+}
+
+#feeling1[type='range']::-moz-range-track  {
+	background: -moz-linear-gradient(left, rgb(35,7,37), rgb(255,237,0)); /* For Firefox 3.6 to 15 */
+}
+
+#feeling2[type='range']::-moz-range-track  {
+	background: -moz-linear-gradient(left, rgb(46,45,19), rgb(250,193,138)); /* For Firefox 3.6 to 15 */
+}
+
+#feeling3[type='range']::-moz-range-track  {
+	background: -moz-linear-gradient(left, rgb(36,72,26), rgb(229,0,81)); /* For Firefox 3.6 to 15 */
+}
+
+#feeling4[type='range']::-moz-range-track  {
+	background: -moz-linear-gradient(left, rgb(38,58,80), rgb(142,196,190)); /* For Firefox 3.6 to 15 */
+}
+
+#feeling5[type='range']::-moz-range-track  {
+	background: -moz-linear-gradient(left, rgb(0,49,43), rgb(189,215,144)); /* For Firefox 3.6 to 15 */
+}
+
+.feelings_range[type=range]::-moz-range-track {
+	height: 24px;
+}
+
+.feelings_range[type=range]::-moz-range-thumb {
+	height: 40px;
+	width: 2px;
+	border-radius: 0%;
+	background-color: var(--txt-color);
+	border: 0px solid var(--txt-color);
+}
+
+.feelings_labels {
+	display: inline-flex;
+	justify-content: space-between;
+	width:100%;
+}
+.feelings_labels>p{
+	text-align: center;
+}
+
+.feeling_buttons {
+	height: 1.7rem;
+	width: auto;
+	padding: 0.4em;
+	margin-top:3em;
+	font-size: 0.8em;
+	background-color: var(--tool-bg-color);
+	border:1px solid var(--txt-color);
+	text-decoration-style: none;
+	color: var(--txt-color);
+}
+
+.feeling_buttons:hover{
+	transform: scale(1.1, 1.1);
+	border: 1.5px solid var(--txt-color);
+	color: var(--txt-color);
+}
+
+/* Medium screen, retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 670px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 670px),
+only screen and (                min-resolution: 192dpi) and (min-width: 670px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 670px) {
+
+	.feeling_option{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 100%;
+		align-items: center;
+		margin-bottom: 3em;
+		padding-bottom: 3em;
+		border-bottom: 1px solid var(--txt-color);
+	}
+
+	.feeling_option .jauge{ 
+		width: 35%;
+	}
+}
+
+/* Large screen, non-retina */
+@media only screen and (min-width: 1000px) {
+	
+	.feeling_option{
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 3em;
+		padding-bottom: 3em;
+		border-bottom: 1px solid var(--txt-color);
+	}
+	.feeling_option .jauge{ 
+		width: 35%;
+	}
+
+	.feeling_buttons {
+		margin-top: 0;
+		margin-left: 4%;
+	}
+}
+
+/* Large screen */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+}	
