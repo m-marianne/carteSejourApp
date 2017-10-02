@@ -69,7 +69,7 @@ input:invalid, input:-moz-submit-invalid, input:-moz-ui-invalid {
 	border: 1.25px solid var(--txt-color);
 	border-style: none;
 	text-decoration-style: none;
-	background-color: var(--tool-bg-color);
+	background-color: rgb(46, 232, 188);
 	cursor: pointer;
 	width: 1.5em;
 	height: 1.5em;
@@ -124,11 +124,11 @@ input:invalid, input:-moz-submit-invalid, input:-moz-ui-invalid {
 	transition-duration: 0.2s;
 }
 
-.identification .form_buttons .form_buttons_submit, .register .form_buttons .form_buttons_submit{
-	color: var(--main-bg-color);
+.NewMap .form_buttons .form_buttons_submit, .identification .form_buttons .form_buttons_submit, .register .form_buttons .form_buttons_submit{
+	color: rgb(46, 232, 188);
 }
 
-.NewMap .form_buttons .form_buttons_submit, .EventDate .form_buttons .form_buttons_submit{
+.EventDate .form_buttons .form_buttons_submit{
 	color: var(--main-bg-color); /*gris*/
 }
 

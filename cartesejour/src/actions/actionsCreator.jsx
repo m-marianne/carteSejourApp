@@ -1,10 +1,12 @@
+export const GET_USER_ID = 'GET_USER_ID';
+export const GET_USERNAME = 'GET_USERNAME';
+export const GET_PASSWORD = 'GET_PASSWORD';
+export const GET_TOKEN = 'GET_TOKEN';
 export const ADD_BLOC_EVENT = 'ADD_BLOC_EVENT';
 export const CHANGE_TRIP_NAME = 'CHANGE_TRIP_NAME';
 export const CHANGE_TRIP_ID = 'CHANGE_TRIP_ID';
 export const CHANGE_MAP_NAME = 'CHANGE_MAP_NAME';
 export const CHANGE_MAP_ID = 'CHANGE_MAP_ID';
-// export const CHANGE_TRIP = 'CHANGE_TRIP';
-// export const CHANGE_MAP = 'CHANGE_MAP';
 export const CHANGE_DATE = 'CHANGE_DATE';
 export const CHANGE_TIME = 'CHANGE_TIME';
 export const CHANGE_MOMENT = 'CHANGE_MOMENT';
@@ -22,27 +24,39 @@ export const CHANGE_DESCRIPTION = 'CHANGE_DESCRIPTION';
 export const CHANGE_IMAGE ='CHANGE_IMAGE';
 export const CHANGE_SOUND = 'CHANGE_SOUND';
 
+export function getUserId(userId) {
+	return {
+		type: 'GET_USER_ID',
+		userId
+	}
+}
+
+export function getUsername(username) {
+	return {
+		type: 'GET_USERNAME',
+		username
+	}
+}
+
+export function getPassword(password) {
+	return {
+		type: 'GET_PASSWORD',
+		password
+	}
+}
+
+export function getToken(token) {
+	return {
+		type: 'GET_TOKEN',
+		token
+	}
+}
+
 export function addBlocEvent() {
 	return {
 		type: 'ADD_BLOC_EVENT'
 	}
 }
-
-// export function changeTrip(tripId, tripName) {
-// 	let trip = {tripId, tripName}; 
-// 	return {
-// 		type: 'CHANGE_TRIP',
-// 		trip: trip
-// 	}
-// }
-
-// export function changeMap(mapId, mapName) {
-// 	let map = {mapId, mapName};
-// 	return {
-// 		type: 'CHANGE_MAP',
-// 		map: map
-// 	}
-// }
 
 export function changeTripName(tripName) {
 	return {

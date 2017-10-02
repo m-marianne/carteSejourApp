@@ -1,26 +1,20 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from createevent.models import Evenement, Map, Trip
+from createevent.models import Map, Trip, Evenement
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
-
+        fields = ('url', 'username', 'email', 'id')
 
 class EvenementSerializer(serializers.ModelSerializer):
-    mapWrapper = serializers.SlugRelatedField(
-    	many=True,
-    	read_only=True,
-    	slug_field='mapName'
-    )
-
-    class Meta:
-        model = Evenement
-        fields = (	'eventDate', 'eventTime', 'eventMoment', 'eventType', 
+	class Meta:
+		model = Evenement
+		fields = (	'pk', 'eventDate', 'eventTime', 'eventMoment', 'eventType', 
 					'eventForecast', 'eventSurprising', 'eventImpression', 
-					'feeling', 'feelingValue', 'angle', 
+					'eventImportance', 'feeling', 'feelingValue', 'angle', 
 					'description', 'img', 'sound', 'mapWrapper')
+
 
 class MapSerializer(serializers.ModelSerializer):
 	class Meta:
@@ -30,4 +24,4 @@ class MapSerializer(serializers.ModelSerializer):
 class TripSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Trip
-		fields = (	'trip_name', 'id')		
+		fields = (	'trip_name', 'id')	

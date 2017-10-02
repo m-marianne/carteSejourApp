@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'm$u$#01d7)5uwd&c93orl4i#kzjok%j%wfeqbqtf)+a_-#$@&^'
+SECRET_KEY = '((rwi9%efjgkfjbs_=b-=cg_(gjc87uilc0x6*t0%rm)vz_t7t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
-    'createevent.apps.CreateeventConfig',
-    'rest_framework.authtoken'
+    'createevent.apps.CreateeventConfig'
 ]
 
 REST_FRAMEWORK = {
@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'fr-FR'
+LANGUAGE_CODE = 'FR-fr'
 
 TIME_ZONE = 'UTC'
 

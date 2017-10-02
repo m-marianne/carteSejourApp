@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Login from './Login/Login';
+import LoginContainer from '../containers/LoginContainer';
 import Register from './Register/Register';
 import UserBoard from './UserBoard/UserBoard';
 import ViewMapContainer from '../containers/ViewMapContainer';
@@ -15,7 +15,7 @@ class App extends Component {
         return(
             <Router>
                 <div>
-                    <Route path="/login" component={Login}/>
+                    <Route path="/login" component={LoginContainer}/>
                     <Route path='/register' component={Register}/>
                     <Route path='/userboard' component={UserBoard}/>
                     <Route path="/newmap" component={NewMapContainer}/>

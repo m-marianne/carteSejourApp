@@ -4,7 +4,7 @@ from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
-
+from django.contrib.auth.models import User
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
@@ -15,7 +15,6 @@ def getId ():
 	value = values.objects.get(name=value.toString())
 	print(value.id)
 
-# Create your models here.
 class Evenement(models.Model):
 	eventDate = models.DateField(auto_now=False, auto_now_add=False)
 	eventTime = models.TimeField(auto_now=False, auto_now_add=False, blank=True, null=True)
@@ -24,6 +23,7 @@ class Evenement(models.Model):
 	eventForecast = models.PositiveIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
 	eventSurprising = models.PositiveIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
 	eventImpression = models.PositiveIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+	eventImportance = models.PositiveIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
 	feeling = models.CharField(max_length=150)
 	feelingValue = models.CharField(max_length=100)
 	angle = models.CharField(max_length=100)
@@ -35,10 +35,9 @@ class Evenement(models.Model):
 
 class Map(models.Model):
 	map_name = models.CharField(max_length=50)
-	# trip_name = models.ForeignKey('Trip')
+	trip_name = models.ForeignKey('Trip', null=True)
 
 
 class Trip(models.Model):
 	trip_name = models.CharField(max_length=50)
-
-
+	# user = models.ForeignKey('User', null=True)

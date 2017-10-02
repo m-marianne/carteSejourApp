@@ -1,14 +1,14 @@
 import 	{ 
-	ADD_BLOC_EVENT, CHANGE_TRIP_ID, CHANGE_MAP_ID, CHANGE_TRIP_NAME, 
+	GET_USER_ID, GET_USERNAME, GET_PASSWORD, GET_TOKEN, ADD_BLOC_EVENT, 
+	CHANGE_TRIP_ID, CHANGE_MAP_ID, CHANGE_TRIP_NAME, 
 	CHANGE_MAP_NAME, CHANGE_DATE, CHANGE_TIME, 
 	CHANGE_MOMENT, CHANGE_TYPE, CHANGE_FORECAST, CHANGE_SURPRISING, 
 	CHANGE_IMPRESSION, CHANGE_IMPORTANCE, CHANGE_FEELING_ID, 
 	CHANGE_FEELING,CHANGE_FEELING_VALUE, CHANGE_ANGLE, RESET_FEELING, 
 	CHANGE_DESCRIPTION, CHANGE_IMAGE, CHANGE_SOUND
 } from "../actions/actionsCreator";
-//CHANGE_MAP, CHANGE_TRIP
-const blocEvent = {
 
+const blocEvent = {
 	eventDate: '',
 	eventTime: '',
 	eventMoment: '',
@@ -27,19 +27,41 @@ const blocEvent = {
 }
 
 export const defaultState = {
+	userId: '',
+	username: '',
+	password:'',
+	token: '',
 	indexMapElements: 0,
 	mapElements: [ blocEvent ],
 	tripName: '',
 	tripId: '',
 	mapName: '',
 	mapId: ''
-	// trip: {'tripId' : null, 'tripName': null },
-	// map: {'mapId': null, 'mapName': null }	
 };
 
 export const rootReducer = (state = defaultState, action) => {
 	//console.log(state);
 	switch(action.type){
+		case GET_USER_ID:
+			return {
+				...state,
+				userId: action.userId
+			};
+		case GET_TOKEN:
+			return {
+				...state,
+				token: action.token	
+			};
+		case GET_USERNAME:
+			return {
+				...state,
+				username: action.username	
+			};
+		case GET_PASSWORD:
+			return {
+				...state,
+				password: action.password	
+			};
 		case ADD_BLOC_EVENT:
 			return {
 				...state,
@@ -49,16 +71,6 @@ export const rootReducer = (state = defaultState, action) => {
 				],
 				indexMapElements: state.indexMapElements+1
 			};
-		// case CHANGE_TRIP:
-		// 	return {
-		// 		...state,
-		// 		trip: Object.assign({}, state.trip, action.trip)
-		// 	};
-		// case CHANGE_MAP:
-		// 	return {
-		// 		...state,
-		// 		map: Object.assign({}, state.map, action.map)
-		// 	}
 		case CHANGE_TRIP_NAME:
 			return {
 				...state,

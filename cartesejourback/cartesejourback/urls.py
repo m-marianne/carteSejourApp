@@ -3,10 +3,8 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers, viewsets
-from cartesejourback.views import *
-from createevent.views import *
+from createevent.views import UserViewSet, EvenementViewSet, MapViewSet, TripViewSet
 from rest_framework.authtoken import views
-
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
