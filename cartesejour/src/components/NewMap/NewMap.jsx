@@ -62,7 +62,7 @@ class NewMap extends Component {
 			headers: {
 		    	'Accept': 'application/json',
 		    	'Content-Type': 'application/json',
-		    	'Authorization': 'Token 22b3fbdb436411f03ec509f67a2a9248e2434144'
+		    	'Authorization': 'Token 59edfa58d59b3b55eec1faf695e2ab34fe9d92fe' //'Token 22b3fbdb436411f03ec509f67a2a9248e2434144'
 		    },
 		  	body: JSON.stringify({"map_name": this.props.mapName}), 
 		  	// redirect: 'follow'

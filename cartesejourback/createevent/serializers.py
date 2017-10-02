@@ -19,9 +19,9 @@ class EvenementSerializer(serializers.ModelSerializer):
 class MapSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Map
-		fields = (	'map_name', 'id')		
+		fields = (	'pk', 'map_name', 'id')		
 
 class TripSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Trip
-		fields = (	'trip_name', 'id')	
+		fields = (	'pk', 'trip_name', 'id')	

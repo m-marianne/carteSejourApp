@@ -22,7 +22,7 @@ class CreateEventForm extends Component{
 
 	    this.state = {
     		eventDate:'',
-			eventTime: '',
+			eventTime: '00:00',
 			eventMoment: [],
 			eventType: '',
 			eventForecast: 0,
@@ -64,6 +64,7 @@ class CreateEventForm extends Component{
 			    "eventForecast": this.props.mapElements[this.props.indexMapElements].eventForecast,
 			    "eventSurprising": this.props.mapElements[this.props.indexMapElements].eventSurprising,
 			    "eventImpression": this.props.mapElements[this.props.indexMapElements].eventImpression,
+			    "eventImportance": this.props.mapElements[this.props.indexMapElements].eventImportance,
 			    "feeling": JSON.stringify(this.props.mapElements[this.props.indexMapElements].feeling),
 			    "feelingValue": JSON.stringify(this.props.mapElements[this.props.indexMapElements].feelingValue),
 			    "angle": JSON.stringify(this.props.mapElements[this.props.indexMapElements].angle),

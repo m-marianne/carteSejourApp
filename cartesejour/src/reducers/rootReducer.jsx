@@ -10,7 +10,7 @@ import 	{
 
 const blocEvent = {
 	eventDate: '',
-	eventTime: '',
+	eventTime: '00:00',
 	eventMoment: '',
 	eventType: '',
 	eventForecast: 0,

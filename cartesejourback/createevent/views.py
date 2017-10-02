@@ -11,6 +11,10 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
+    def create(self, request, *args, **kwargs):
+        print(request.data)
+        return super(UserViewSet, self).create(request, *args, **kwargs)
+
 class MapViewSet(viewsets.ModelViewSet):
     queryset = Map.objects.all()
     serializer_class = MapSerializer

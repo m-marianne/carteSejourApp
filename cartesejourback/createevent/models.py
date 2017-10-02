@@ -40,4 +40,4 @@ class Map(models.Model):
 
 class Trip(models.Model):
 	trip_name = models.CharField(max_length=50)
-	# user = models.ForeignKey('User', null=True)
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
