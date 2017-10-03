@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styleForm from "../Login/styles/styleForm.css";
 
 class Register extends Component {
    render() {
