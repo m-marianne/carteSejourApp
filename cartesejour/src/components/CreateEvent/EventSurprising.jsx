@@ -7,7 +7,7 @@ class EventSurprising extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			boundMin: '1',
+			boundMin: '0',
 			boundMax: '100'
 		};
 	}
@@ -28,7 +28,7 @@ class EventSurprising extends Component {
 							id="range_eventForecast1" 
 							className="range"
 							type="range" 
-							min="1" max="100" 
+							min="0" max="100" 
 							step="1" 
 							value={this.state.value} 
 							onChange={this.handleChangeB} 

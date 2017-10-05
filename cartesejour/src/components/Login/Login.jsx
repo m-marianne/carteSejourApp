@@ -28,7 +28,7 @@ class Login extends Component{
 	}		
 
 	handleFormSubmit = (event) => {
-		var user_id = 0;
+		var token = 0;
 
 		event.preventDefault();
 
@@ -37,7 +37,7 @@ class Login extends Component{
 			headers: {
 				'Accept': 'application/json',
 		    	'Content-Type': 'application/json',
-		    	'Authorization': 'Token 59edfa58d59b3b55eec1faf695e2ab34fe9d92fe' //'Token 22b3fbdb436411f03ec509f67a2a9248e2434144'
+		    	'Authorization': 'Token 59edfa58d59b3b55eec1faf695e2ab34fe9d92fe'
 		    },
 		    body: JSON.stringify({
 		    	"username": this.props.username,
@@ -47,10 +47,10 @@ class Login extends Component{
 		.then((response) => {
 			if(response.ok){
 				response.json().then((data) => {
-					console.log(data);
-					user_id = data["id"];
-					console.log(user_id)
-					this.props.getUserId(user_id)
+				console.log(data);
+					token = data["token"];
+					console.log(token)
+					this.props.getUserId(token)
 				});
 			} else {
 				alert("FETCH LOGIN = Tous les champs nécessaires à l'identification ne sont pas remplis")

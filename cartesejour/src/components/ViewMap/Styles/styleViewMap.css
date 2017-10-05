@@ -1,39 +1,47 @@
-
-
-
-/* _______________________________________________________________
-
-					barre de navigation
-_________________________________________________________________*/
-
 .viewMap_Tools {
 	/*border: 1px solid orange;*/
 	height: 2.5em;
-	padding: 0.3em;
-	width: 100%;
-	margin-bottom: 0.8em;
+	width: 90vw;
 	display: inline-flex;
 	flex-direction: row;
 	align-content: space-between;
+	align-items: bottom;
+	margin-bottom: 0.8em;
 }
 
 .viewMap_Tools_buttons_group {
-	display: inline-flex;
-	flex-direction: row;
-	align-content: space-between;
-	margin-left: 1.2em;
-	margin-right: 1.8em
+	width: 40%;
 }
 
 .viewMap_Tools_buttons {
 	width: 2em;
 	height: 2em;
-	background-color: var(--txt-color);
 	border: none;
-	margin-right: 0.8em;
 }
+
+#viewMap_Tools_button_edit{
+	background: url(/../../../../img/PictoEdit.svg) 0 0 no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin-right: 1em;
+}
+
+#viewMap_Tools_button_export{
+	background: url(/../../../../img/PictoExport.svg) 0 0 no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin-right: 0.9em;
+}
+
+#viewMap_Tools_button_share{
+	background: url(/../../../../img/PictoShare.svg) 0 0 no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
 .toolbar {
-	width: 70em;
+	width: 66%;
+	text-align: right;
 }
 
 .toolbar_zoom {
@@ -65,10 +73,6 @@ _________________________________________________________________*/
     justify-content: space-between;
 }
 
-/* _______________________________________________________________
-
-					autres
-_________________________________________________________________*/
 .viewMap_Infos {
 	/*border: 1px solid orange;*/
 	display: inline-flex;
@@ -99,8 +103,8 @@ _________________________________________________________________*/
 }
 
 .viewMap_container_MapLegend {
-	/*border: 1px solid red;*/
-	/*position: relative;*/
+	border: 1px solid red;
+	position: relative;
 	display: inline-flex;
 	flex-direction: column;
 	align-content: space-between;
@@ -112,15 +116,24 @@ _________________________________________________________________*/
 	padding: 0;
 }
 
-.viewMap_map {
-	position: relative;
+.viewMap_mapFond {
 	background: url(/../../../../img/fondCarte.svg) 0 0 no-repeat;
 	background-size: contain;
-	width: 302.5px;
-	height: 319px;
+	width: 92vw;
+	height: 52vh;
+}
+
+.viewMap_map {
+	/*border: 1px solid red;*/
+	/* */
+	margin: auto;
+	top: 4.8%;
+	width: 90%;
+	height: 90%;
 }
 
 .viewMap_map_element {
+	/*border: 1px solid blue;*/
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -165,23 +178,21 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 670px) 
 
 	.viewMap_Tools {
 		/*border: 1px solid red;*/
-		height: 4.5em;
-		padding: 0.5em 8em;
+		width: 70vw;
+		height: 3.5em;
 	}
 
 	.viewMap_Tools_buttons_group {
-		width: 25%;
-		margin-right: 10em;
+		width: 33%;
 	}
 
 	.viewMap_Tools_buttons, .previewToolbar_navig {
-		width: 2.5em;
-		height: 2.5em;
+		width: 3em;
+		height: 3em;
 	}
 
 	.ViewMapToolbar_zoom {
-		width: 48vw;
-		margin-top: -0.6em;
+		width: 66%;
 	}
 
 
@@ -189,8 +200,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 670px) 
 		margin-top: 0.5em;
 	}
 
-	.toolbar_zoom_valuesContainer{
-		font-size: 2em;
+	.toolbar_zoom_valuesContainer {
+		font-size: 1.4em;
 	}
 
 	.viewMap_container_MapLegend {
@@ -203,15 +214,14 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 670px) 
 		padding: 0;
 	}
 
-	.viewMap_map {
-		position: relative;
+	.viewMap_mapFond {
 		background: url(/../../../../img/fondCarte.svg) 0 0 no-repeat;
 		background-size: contain;
-		width: 605px;
-		height: 638px;
+		width: 70vw;
+		height: 52.8vh;
 	}
 
-	.Legend{
+	.Legend { 
 		background-color: var(--txt-color);
 		opacity: 0.2;
 		margin-right: 1.5%;
@@ -236,15 +246,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 670px) 
 @media only screen and (min-width: 1000px) {
 
 	.viewMap_Tools {
-		width: 100%;
-		padding: 0;
+		width: 70vw;
 	}
 
-	.viewMap_Tools_buttons_group {
-		margin-left: 5em;
-	}
-
-	.viewMap_container_MapLegend{
+	.viewMap_container_MapLegend {
 		display: inline-flex;
 		flex-direction: row;
 		width: 100%;
@@ -253,7 +258,14 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 670px) 
 		padding: 0;
 	}
 
-	.Legend{
+	.viewMap_mapFond {
+		background: url(/../../../../img/fondCarteL.svg) 0 0 no-repeat;
+		background-size: contain;
+		width: 70vw;
+		height: 63.5vh;
+	}
+
+	.Legend {
 		width: 25%;
 		height: auto;
 		margin-right: 0%;
@@ -269,13 +281,12 @@ only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px)
 only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
 
-.viewMap_map {
-		position: relative;
-		background: url(/../../../../img/fondCarte.svg) 0 0 no-repeat;
+	.viewMap_mapFond {
+		border: 1px solid red;
+		background: url(/../../../../img/fondCarteL.svg) 0 0 no-repeat;
 		background-size: contain;
-		width: 894px;
-		height: 725px;
-		margin-bottom: 2em;
+		width: 67vw;
+		height: 72.7vh;
 	}
 
 }

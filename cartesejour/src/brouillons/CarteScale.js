@@ -7,47 +7,69 @@ class Carte extends Component {
 	drawElements(element, i){
 		const nodeD3 = new ReactFauxDOM.createElement('svg', i);
 		nodeD3.key = i;
-
 		//ensemble des datas
 		let dataPicto = element.eventType;
 		let dataPosHoryzontale1 = parseInt(element.eventForecast, 10);
 		let dataPosHoryzontale2 = element.eventSurprising;
-		let dataPosVerticale = element.eventImpression;
-		let dataTailleBloc = element.eventImportance;
+		let dataPosVerticale = 100-(element.eventImpression);
+		let dataTailleBloc = (element.eventImportance)*0.5;
 		let dataId = Object.keys(element.feeling);
 		let dataColor = Object.values(element.feeling);
 		let dataImportance = Object.values(element.feelingValue);
 		let dataAngle = Object.values(element.angle);
 
+
+
+		//Première étape de visualisation sur une tablette, dimensions du SVG en dur
 		//dimensions
-		let svgWidth = 120; 
-		let svgHeight = 120;
+		let svgPere_Width = 120; 
+		let svgPere_Height = 120;
 		let margin = 10;
-		let width = svgWidth-(margin*2);
-		let height = svgHeight-(margin*2);
-		let pictoR = ((svgWidth/120)/2)*dataTailleBloc;
+		let width = svgPere_Width-(margin*2);
+		let height = svgPere_Height-(margin*2);
+		let wCenter= width/2;
+		let hCenter= height/2;
 
-		//mise en place des scales pour positionner les éléments
-		var xScale = d3.scaleLinear()
-							.domain([100, 0])
-							.range([width-margin, margin-(pictoR*2)]);
-		var yScale = d3.scaleLinear()
+		//les paramètres de la viewBox
+		let widthVB = Math.round(svgPere_Width/dataTailleBloc);
+		let heightVB = Math.round(svgPere_Height/dataTailleBloc);
+
+		//pour positionner les éléments
+		let bornMaxW = width/2;
+		let bornMaxH = height/2;
+		let bornMinW = bornMaxW-widthVB;
+		let bornMinH = bornMaxH-heightVB;
+
+		//interval
+		let uniteHorizontale = -(bornMaxW-bornMinW)/100;
+		let uniteVerticale = -(bornMaxH-bornMinH)/100;
+
+		//mise en place des scales
+		var scaleW = d3.scale.linear()
 							.domain([0, 100])
-							.range([height-margin, margin-(pictoR*2)]);
+							.range([margin, width+margin]);
+		var scaleH = d3.scale.linear()
+							.domain([0, 100])
+							.range([margin, height+margin]);
 
-		let posX = xScale(dataPosHoryzontale1+(dataPosHoryzontale2/2));
-		let	posY = yScale(dataPosVerticale);
+		let posH = scaleW(dataPosHoryzontale1+(dataPosHoryzontale2/2));
+		let	posV = scaleH(dataPosVerticale);
+
+		let pictoR = ((svgPere_Width/120)/2);
+
+		
 
 		//création du container svg/D3
 		let blocEventWrapper = d3.select(nodeD3).attr('id', 'blocEventWrapper'+i+'')
-												.attr('width', width+'%')
-												.attr('height', height+'%')
-												.attr('viewBox', '0 0 '+width+' '+height)
+												// .attr('width', svgWidth+'px')
+												// .attr('height', svgHeight+'px')
+												.attr('viewBox', posH+' '+posV+' '+widthVB+' '+heightVB)
 												.attr('preserveAspectRatio', 'xMidYMid meet')
 
 		//Bloc Evenement (regroupe le picto et les couleurs)
 		let blocEvent = blocEventWrapper.append('g')
 										.attr('class', 'blocEvent')
+										//.attr('transform', 'translate('+margin+','+margin+')')
 
 		let grads = blocEvent.append('defs')
 							.selectAll('radialGradient')
@@ -58,11 +80,11 @@ class Carte extends Component {
 		//définition du rendu du dégradé (attributs)
 		grads.append('stop')
 		    .attr('offset', '15%')
-		    .attr('stop-color', (d, i) => { return dataColor[i] });
+		    .attr('stop-color', (d, i) => { console.log("dataColor[i] - 1 ==> "+dataColor[i]); return dataColor[i] });
 
 		grads.append('stop')
 		    .attr('offset', '100%')
-		    .attr('stop-color', (d, i) => { return dataColor[i] })
+		    .attr('stop-color', (d, i) => { console.log("dataColor[i] - 2 ==> "+dataColor[i]); return dataColor[i] })//"RGB(255,255,255)")
 		    .attr('stop-opacity', '0');
 
 		//Les couleurs
@@ -77,15 +99,15 @@ class Carte extends Component {
 										.attr('r', (d, i) => { return (d*pictoR)})
 										.attr('fill', (d, j) => { return 'url(#grad' + i +j+ ')'; })
 										//.attr('fill', (d, i) => { return dataColor[i]; })
-										.attr('cx', (d, i) => { return (posX+pictoR ) })
-										.attr('cy', (d, i) => { return (posY+pictoR ) })
-										.attr('transform', (d, i) => { return ('rotate('+(dataAngle[i]*i)+', '+posX+', '+posY+')')} );
+										.attr('cx', (d, i) => { return (wCenter+pictoR ) })
+										.attr('cy', (d, i) => { return (hCenter+pictoR ) })
+										.attr('transform', (d, i) => { return ('rotate('+(dataAngle[i]*i)+', '+wCenter+', '+hCenter+')')} );
 		//le picto
 		let pictoEvent = blocEventWrapper.append('image')
 										.attr('xlink:href', dataPicto)
 										.attr('id', 'pictoEvent')
-										.attr('x', posX)
-										.attr('y', posY)
+										.attr('x', wCenter-pictoR)
+										.attr('y', hCenter-pictoR)
 										.attr('width', pictoR*2)
 										.attr('height', pictoR*2);
 		return nodeD3.toReact()
